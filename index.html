@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Название сайта</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <img src="logo.png" alt="Логотип КубГУ" class="logo">
+        <div class="site-name">Название сайта</div>
+        <nav id="nav">
+            <a href="#">Ссылка меню 1</a>
+            <a href="#">Ссылка 2</a>
+            <a href="#">Ссылка 3</a>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="links-section">
+            <h2>Список гиперссылок</h2>
+            <ul>
+                <li><a href="http://kubsu.ru/">Абсолютная ссылка на главную страницу КубГУ</a></li>
+                <li><a href="https://kubsu.ru/">Абсолютная ссылка на главную страницу КубГУ в протоколе https</a></li>
+                <li id="image-link">
+                    Ссылка-изображение:<br>
+                    <a href="https://kubsu.ru/">
+                        <img src="http://filearchive.cnews.ru/img/cnews/2021/10/19/logos/fb/fbb6b45d9cdab04786615dda9f3644ac.gif" width="188" height="188" alt="Логотип КубГУ">
+                    </a>
+                </li>
+                <li><a href="index2.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+                <li><a href="index.html">Сокращенная ссылка на главную страницу</a></li>
+                <li><a href="#image-link">Ссылка на фрагмент текущей страницы</a></li>
+                <li><a href="https://www.kubsu.ru/admission?program=ai&amp;location=kuban&amp;year=2025">Ссылка с тремя параметрами в URL</a></li>
+                <li><a href="https://www.kubsu.ru/news?id=101">Ссылка с параметром id в URL</a></li>
+                <li><a href="page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+                <li><a href="about/page.html">Относительная ссылка на страницу в каталоге about</a></li>
+                <li><a href="../vishe-page.html">Относительная ссылка на страницу в каталоге уровнем выше</a></li>
+                <li><a href="../../top-page.html">Относительная ссылка на страницу двумя уровнями выше</a></li>
+                <li>Абзац с <a href="context.html">контекстной ссылкой</a> внутри текста.</li>
+                <li><a href="https://www.kubsu.ru/index.php#news">Ссылка на фрагмент страницы стороннего сайта</a></li>
+                <li>
+                    Интерактивное изображение:
+                    <img src="https://www.kubsu.ru/video/100_years_science_cover.png" width="188" height="188" alt="Интерактивная карта" usemap="#imagemap">
+                    <map name="imagemap">
+                        <area shape="rect" coords="0,0,100,100" href="rect.html" alt="Прямоугольник">
+                        <area shape="circle" coords="90,90,40" href="circle.html" alt="Круг">
+                    </map>
+                </li>
+                <li><a href="">Ссылка с пустым href</a></li>
+                <li><a href="#">Ссылка без href</a></li>
+                <li><a href="https://kubsu.ru/" rel="nofollow">Запрещённый переход для поисковиков</a></li>
+                <li><a href="hidden.html">Страница, запрещённая к индексации</a></li>
+                <li>
+                    Нумерованный список ссылок с подписями title
+                    <ol>
+                        <li><a href="link1.html" title="Первая ссылка">Ссылка 1</a></li>
+                        <li><a href="link2.html" title="Вторая ссылка">Ссылка 2</a></li>
+                        <li><a href="link3.html" title="Третья ссылка">Ссылка 3</a></li>
+                    </ol>
+                </li>
+                <li><a href="ftp://username:password@ftp.example.com/files/document.pdf">Ссылка на файл по FTP с авторизацией</a></li>
+            </ul>
+        </section>
+        <section class="table-section">
+            <h2>Таблица</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Колонка 1</th>
+                        <th>Колонка 2</th>
+                        <th>Колонка 3</th>
+                        <th>Колонка 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Данные 1.1</td><td>Данные 1.2</td><td>Данные 1.3</td><td>Данные 1.4</td></tr>
+                    <tr><td>Данные 2.1</td><td>Данные 2.2</td><td>Данные 2.3</td><td>Данные 2.4</td></tr>
+                    <tr><td>Данные 3.1</td><td>Данные 3.2</td><td>Данные 3.3</td><td>Данные 3.4</td></tr>
+                    <tr><td>Данные 4.1</td><td>Данные 4.2</td><td>Данные 4.3</td><td>Данные 4.4</td></tr>
+                    <tr><td>Данные 5.1</td><td>Данные 5.2</td><td>Данные 5.3</td><td>Данные 5.4</td></tr>
+                    <tr><td>Данные 6.1</td><td>Данные 6.2</td><td>Данные 6.3</td><td>Данные 6.4</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="form-section">
+            <h2>Форма регистрации</h2>
+            <form action="/submit" method="post">
+                <label for="fullname">ФИО:</label><br>
+                <input type="text" id="fullname" name="fullname" required><br><br>
+
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Телефон:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__"><br><br>
+
+                <label for="birthdate">Дата рождения:</label><br>
+                <input type="date" id="birthdate" name="birthdate"><br><br>
+
+                <label>Пол:</label><br>
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="male">Мужской</label><br>
+                <input type="radio" name="gender" value="female" id="female">
+                <label for="female">Женский</label><br>
+                <input type="radio" name="gender" value="other" id="other">
+                <label for="other">Другое</label><br><br>
+
+                <label>Любимые языки:</label><br>
+                <select name="languages[]" multiple size="6">
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="c++">C++</option>
+                    <option value="php">PHP</option>
+                    <option value="pascal">Pascal</option>
+                </select><br><br>
+
+                <label for="bio">Биография:</label><br>
+                <textarea id="bio" name="bio" rows="5" cols="50" placeholder="Расскажите о себе..."></textarea><br><br>
+
+                <label>
+                    <input type="checkbox" name="agreement" required> С контрактом ознакомлен(а)
+                </label><br><br>
+
+                <button type="submit">Сохранить</button>
+            </form>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>&copy; Николай Овсепян</p>
+    </footer>
+</body>
+</html>
