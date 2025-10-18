@@ -21,6 +21,7 @@ main {
     color: white;  
     padding: 15px 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     position: fixed;
@@ -38,6 +39,8 @@ main {
 .site-name {
     font-size: 24px;
     color: white;
+    margin-left: 10px;
+    white-space: nowrap;
 }
 
 #nav {
@@ -204,5 +207,6 @@ button:hover {
     position: relative;
 
 }
+
 
 
